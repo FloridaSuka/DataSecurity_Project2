@@ -12,6 +12,3 @@ out/
 *.log
 *.tmp
 
-# Maven
-target/
-build/
