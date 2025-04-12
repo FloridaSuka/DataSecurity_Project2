@@ -1,0 +1,17 @@
+# Fajllat e kompiluar nga Java
+*.class
+
+# Dosjet që IntelliJ përdor për output
+out/
+
+# IntelliJ IDEA settings
+.idea/
+*.iml
+
+# Logs dhe fajlla të përkohshëm
+*.log
+*.tmp
+
+# Maven
+target/
+build/
