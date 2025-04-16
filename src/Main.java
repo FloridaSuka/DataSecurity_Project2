@@ -1,4 +1,9 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+
 
 public class Main {
     public static void main(String[] args){
@@ -35,16 +40,26 @@ public class Main {
                 case 1:
                     System.out.println("\n--📖 Book Cipher--");
                     BookCipher bookCipher = new BookCipher();
+                    // Ngarkimi i librit
+                    Scanner input = new Scanner(System.in);
+                    System.out.print("Shkruaj path-in e file-it të librit (p.sh. C:\\libri.txt): ");
+                    String filePath = input.nextLine();
+                    bookCipher.loadBookFromFile(filePath);
                     if (action == 1) {
                         System.out.println("Shkruaj mesazhin për enkriptim:");
                         String msg = sc.nextLine();
                         String encrypted = bookCipher.encrypt(msg);
                         System.out.println("🔐 Enkriptuar: " + encrypted);
                     } else {
-                        System.out.println("Shkruaj tekstin për dekriptim:");
+                        System.out.println("Shkruaj numrat e ndarë me hapësirë (p.sh. 5 12 7): ");
                         String msg = sc.nextLine();
-                        String decrypted = bookCipher.decrypt(msg);
-                        System.out.println("🔓 Dekriptuar: " + decrypted);
+                        String[] parts = msg.trim().split("\\s+");
+                        List<Integer> cipher = new ArrayList<>();
+                        for (String part : parts) {
+                            cipher.add(Integer.parseInt(part));
+                        }
+                        String decrypted = bookCipher.decrypt(cipher);
+                        System.out.println("🔓 Descriptor: " + decrypted);
                     }
                     break;
 
