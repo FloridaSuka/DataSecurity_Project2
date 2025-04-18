@@ -16,7 +16,7 @@ public class BookCipher {
                 }
             }
             fileScanner.close();
-            System.out.println("Libri u ngarkua me sukses!");
+            System.out.println("\uD83D\uDCDA Libri u ngarkua me sukses!");
         } catch (FileNotFoundException e) {
             System.out.println("File nuk u gjet: " + filePath);
             System.exit(1);
@@ -25,15 +25,20 @@ public class BookCipher {
     public String encrypt(String message) {
         return "Kodi ende nuk eshte implementuar.";
     }
+
     // Deshifron indekset në fjalë nga libri
     public static String decrypt(List<Integer> cipher, boolean firstLetterOnly) {
         StringBuilder message = new StringBuilder();
         for (int index : cipher) {
-            int trueIndex = index - 1; // konvertim nga 1-based në 0-based
+            if (index == '\\') {
+                message.append("\\");
+                continue;
+            }
+            int trueIndex = index - 1;
             if (trueIndex >= 0 && trueIndex < bookWords.size()) {
                 String word = bookWords.get(trueIndex);
                 if (firstLetterOnly && !word.isEmpty()) {
-                    message.append(word.charAt(0)); // vetëm shkronja e parë
+                    message.append(word.charAt(0));
                 } else {
                     message.append(word).append(" ");
                 }

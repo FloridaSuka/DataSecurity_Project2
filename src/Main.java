@@ -9,6 +9,9 @@ public class Main {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int algChoice = 0;
+        BookCipher bookCipher = null;
+        boolean bookLoaded = false;
+
 
         while(true) {
             if (algChoice == 0) {
@@ -39,25 +42,42 @@ public class Main {
             switch (algChoice) {
                 case 1:
                     System.out.println("\n--📖 Book Cipher--");
-                    BookCipher bookCipher = new BookCipher();
                     // Ngarkimi i librit
-                    Scanner input = new Scanner(System.in);
-                    System.out.print("Shkruaj path-in e file-it të librit (p.sh. C:\\libri.txt): ");
-                    String filePath = input.nextLine();
-                    bookCipher.loadBookFromFile(filePath);
+                    if (bookCipher == null || !bookLoaded) {
+                        bookCipher = new BookCipher();
+                        Scanner input = new Scanner(System.in);
+                        System.out.print("Shkruaj path-in e file-it të librit (p.sh. C:\\\\libri.txt): ");
+                        String filePath = input.nextLine();
+                        bookCipher.loadBookFromFile(filePath);
+                        bookLoaded = true;
+                    }
+
                     if (action == 1) {
                         System.out.println("Shkruaj mesazhin për enkriptim:");
                         String msg = sc.nextLine();
-                        String encrypted = bookCipher.encrypt(msg);
+                        System.out.print("A dëshiron të enkriptosh vetëm shkronjat e para të fjalëve? (po/jo): ");
+                        String choice = sc.nextLine().trim().toLowerCase();
+                        boolean firstLetterOnly = choice.equals("po");
+
+                        String encrypted = bookCipher.encrypt(msg, firstLetterOnly);
                         System.out.println("🔐 Enkriptuar: " + encrypted);
+
                     } else {
                         System.out.println("Shkruaj numrat e ndarë me hapësirë (p.sh. 5 12 7): ");
                         String msg = sc.nextLine();
                         String[] parts = msg.trim().split("\\s+");
                         List<Integer> cipher = new ArrayList<>();
+
                         for (String part : parts) {
-                            cipher.add(Integer.parseInt(part));
+                            try {
+                                int number = Integer.parseInt(part);
+                                cipher.add(number);
+                            } catch (NumberFormatException e) {
+                                // nëse nuk është numër, shto -92 që do të përfaqësojë "\"
+                                cipher.add((int) '\\');  // ASCII për backslash është 92
+                            }
                         }
+
                         System.out.println("A dëshiron vetëm shkronjat e para të fjalëve? (po/jo): ");
                         String choice = sc.nextLine().trim().toLowerCase();
                         boolean firstLetterOnly = choice.equals("po");
