@@ -1,5 +1,5 @@
 # DataSecurity_Project2
-Udhëzime për Ekzekutimin e Programit
+## Udhëzime për Ekzekutimin e Programit
 
 Ky aplikacion Java implementon dy algoritme të sigurisë së mesazheve:
     Book Cipher, Route Transposition.
@@ -15,3 +15,49 @@ Ky aplikacion Java implementon dy algoritme të sigurisë së mesazheve:
 
 Nëse zgjidhni Book Cipher, do ju kërkohet të jepni path-in drejt një .txt file që përmban tekst (libri).
 Për enkriptim një mesazh që do të enkriptohet, kurse për dekriptim do te kerkohet te jepni numra të ndarë me hapësirë që përfaqësojnë pozitat e fjalëve në libër.
+
+***
+## Route Transposition Cipher - Përshkrimi i algoritmit
+Algoritmi **Route Transposition Cipher** është një teknikë enkriptimi që përdor një matrice për të ndryshuar rendin e shkronjave në mesazh. Karakteret futen në një matricë me madhësi `rreshta x kolona`, mbushen rresht pas rreshti, dhe lexohen kolonë pas kolone për të gjeneruar tekstin e enkriptuar.
+
+- **Mbushja:** Rresht-pas-rreshti (left → right, top → bottom)
+- **Leximi:** Kolonë-pas-kolone (top → bottom, left → right)
+- **Padding:** Karakteri `'X'` përdoret për të plotësuar matricën nëse është e nevojshme.
+*** 
+## Shembulli 1
+### Enkriptimi
+**Plaintext**: PERSHENDETJE  
+Si do duket matrica(3 x 4):  
+```
+     MBUSHJA                          LEXIMI
+
+P  -> 	E  -> 	R		p   |	E   |	R  |
+S  -> 	H  -> 	E		S   |	H   |	E  |
+N  -> 	D  -> 	E		N   |	D   |	E  |	
+T  -> 	J  -> 	E		T   V	J   V	E  V
+```
+![image](https://github.com/user-attachments/assets/6ba460bf-b66a-434b-8bb3-d8122eebf6ea)
+### Dekriptimi
+///
+///
+///
+***
+## Shembulli 2
+### Enkriptimi
+**Plaintext**: This is a test  
+Si do duket matrica(3 x 4):  
+```
+    MBUSHJA                          LEXIMI
+
+T  ->  H  ->  I          	T   |  H   |  I  |
+S  ->  I  ->  S	  	        S   |  I   |  S  |
+A  ->  T  ->  E          	A   |  T   |  E  |
+S  ->  T  ->  X          	S   V  T   V  X  V
+
+```
+![image](https://github.com/user-attachments/assets/74e680bd-be08-4f50-b4a8-6e89a55b430c)
+### Dekriptimi
+///
+///
+///
+
