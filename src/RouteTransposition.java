@@ -1,5 +1,6 @@
 public class RouteTransposition {
     public static String encrypt(String plaintext) {
+        plaintext = plaintext.trim().toUpperCase();
 
         int length = plaintext.length();
         int rows = (int) Math.ceil(Math.sqrt(length));
