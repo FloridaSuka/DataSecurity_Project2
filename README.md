@@ -38,9 +38,11 @@ T  -> 	J  -> 	E		T   V	J   V	E  V
 ```
 ![image](https://github.com/user-attachments/assets/6ba460bf-b66a-434b-8bb3-d8122eebf6ea)
 ### Dekriptimi
+///  
 ///
-///
-///
+  
+![image](https://github.com/user-attachments/assets/3194ea54-4efe-4f8c-a5a0-cda37067ef2f)
+
 ***
 ## Shembulli 2
 ### Enkriptimi
@@ -57,7 +59,8 @@ S  ->  T  ->  X          	S   V  T   V  X  V
 ```
 ![image](https://github.com/user-attachments/assets/74e680bd-be08-4f50-b4a8-6e89a55b430c)
 ### Dekriptimi
-///
-///
-///
+///  
+///  
+![image](https://github.com/user-attachments/assets/d2528817-c600-4556-965e-46a65bb0566e)
+
 
