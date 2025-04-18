@@ -59,22 +59,21 @@ public class Main {
                             cipher.add(Integer.parseInt(part));
                         }
                         String decrypted = bookCipher.decrypt(cipher);
-                        System.out.println("🔓 Descriptor: " + decrypted);
+                        System.out.println("🔓 Dekriptuar: " + decrypted);
                     }
                     break;
 
                 case 2:
                     System.out.println("\n--🚗 Route Transposition--");
-                    RouteTransposition route = new RouteTransposition();
                     if (action == 1) {
                         System.out.println("Shkruaj mesazhin për enkriptim:");
                         String msg = sc.nextLine();
-                        String encrypted = route.encrypt(msg);
+                        String encrypted = RouteTransposition.encrypt(msg);
                         System.out.println("🔐 Enkriptuar: " + encrypted);
                     } else {
                         System.out.println("Shkruaj tekstin për dekriptim:");
                         String msg = sc.nextLine();
-                        String decrypted = route.decrypt(msg);
+                        String decrypted = RouteTransposition.decrypt(msg);
                         System.out.println("🔓 Dekriptuar: " + decrypted);
                     }
                     break;
