@@ -58,13 +58,33 @@ public class Main {
                         for (String part : parts) {
                             cipher.add(Integer.parseInt(part));
                         }
+<<<<<<< HEAD
+                        System.out.println("A dëshiron vetëm shkronjat e para të fjalëve? (po/jo): ");
+                        String choice = sc.nextLine().trim().toLowerCase();
+                        boolean firstLetterOnly = choice.equals("po");
+                        System.out.println("Dekriptimi po behet me komplet fjalen!");
+
+                        String decrypted = BookCipher.decrypt(cipher, firstLetterOnly);
+=======
                         String decrypted = bookCipher.decrypt(cipher);
+<<<<<<< Updated upstream
+=======
+>>>>>>> b6860bc10ce951bf1b40cbed86fb33081ab0b2ec
+>>>>>>> Stashed changes
                         System.out.println("🔓 Dekriptuar: " + decrypted);
                     }
                     break;
 
                 case 2:
                     System.out.println("\n--🚗 Route Transposition--");
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+                    RouteTransposition route = new RouteTransposition();
+
+=======
+>>>>>>> b6860bc10ce951bf1b40cbed86fb33081ab0b2ec
+>>>>>>> Stashed changes
                     if (action == 1) {
                         System.out.println("Shkruaj mesazhin për enkriptim:");
                         String msg = sc.nextLine();
