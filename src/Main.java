@@ -81,8 +81,6 @@ public class Main {
                         System.out.println("A dëshiron vetëm shkronjat e para të fjalëve? (po/jo): ");
                         String choice = sc.nextLine().trim().toLowerCase();
                         boolean firstLetterOnly = choice.equals("po");
-                        System.out.println("Dekriptimi po behet me komplet fjalen!");
-
                         String decrypted = BookCipher.decrypt(cipher, firstLetterOnly);
                         System.out.println("🔓 Dekriptuar: " + decrypted);
                     }
