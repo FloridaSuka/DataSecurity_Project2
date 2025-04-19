@@ -66,9 +66,8 @@ Algoritmi **Route Transposition Cipher** është një teknikë enkriptimi që p�
 
 ****Dekriptimi me fjalë të plota****  
 ***Ciphertext***: 175 25 45 83 84 87  
-<img width="350" alt="image" src="https://github.com/user-attachments/assets/d13490cb-1b43-4c54-98d6-9d487882ce18" />
-
-**
+<img width="350" alt="image" src="https://github.com/user-attachments/assets/d13490cb-1b43-4c54-98d6-9d487882ce18" />  
+***
 #### Shembull 2
 ****Enkriptimi me shkronjën e parë****  
 ***Plaintext***: Siguria e te dhenave  
@@ -98,8 +97,7 @@ T  -> 	J  -> 	E		T   V	J   V	E  V
 ///
   
 ![image](https://github.com/user-attachments/assets/3194ea54-4efe-4f8c-a5a0-cda37067ef2f)
-
-**
+***
 #### Shembulli 2
 ****Enkriptimi****  
 ***Plaintext***: This is a test   
