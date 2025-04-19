@@ -40,8 +40,8 @@ Pas përfundimit të një veprimi, programi do t’ju mundësojë të zgjidhni n
 2. Ndërro algoritmin
 3. Mbyll programin
 ```
-**Për të parë se si funksionon programi më hollësisht, [klikoni këtu për të parë videon](./demo/demo-video.mp4).**
-
+### 🎬 Demonstrim i Programit
+⬇️ **[Kliko këtu për të parë videon si funksionon programi](https://github.com/FloridaSuka/DataSecurity_Project2/raw/main/viedo.mp4)**
 ***
 ## Përshkrimi i algoritmit
 ### Book Cipher
@@ -60,16 +60,23 @@ Algoritmi **Route Transposition Cipher** është një teknikë enkriptimi që p�
 ## Shembuj të rezultateve të ekzekutimit
 ### Book Cipher
 #### Shembull 1
-****Enkriptimi****  
-***Plaintext***: hgj  
-****Dekriptimi****  
-***Ciphertext***: jjhj
-**
+****Enkriptimi me fjalë të plota****  
+***Plaintext***: Ujerat e fresket zhurmonin prane pyllit  
+<img width="440" alt="image" src="https://github.com/user-attachments/assets/c29860dd-0cd1-4de3-b0d9-e55b8fe48b97" />
+
+****Dekriptimi me fjalë të plota****  
+***Ciphertext***: 175 25 45 83 84 87  
+<img width="350" alt="image" src="https://github.com/user-attachments/assets/d13490cb-1b43-4c54-98d6-9d487882ce18" />  
+***
 #### Shembull 2
-****Enkriptimi****  
-***Plaintext***: hgj  
-****Dekriptimi****  
-***Ciphertext***: jjhj
+****Enkriptimi me shkronjën e parë****  
+***Plaintext***: Siguria e te dhenave  
+<img width="436" alt="image" src="https://github.com/user-attachments/assets/1e2da56c-3bdc-4df3-a658-94f62db93774" />
+
+****Dekriptimi me shkronjën e parë****  
+***Ciphertext***: 19 2 9 31 101 1 25 7 29 28 57 43 4 3 22 44  
+<img width="339" alt="image" src="https://github.com/user-attachments/assets/6ba28bcd-d1b4-4f4a-a000-a1497f3a1db0" />
+
 ***
 ### Route Transposition Cipher
 #### Shembulli 1
@@ -90,8 +97,7 @@ T  -> 	J  -> 	E		T   V	J   V	E  V
 ///
   
 ![image](https://github.com/user-attachments/assets/3194ea54-4efe-4f8c-a5a0-cda37067ef2f)
-
-**
+***
 #### Shembulli 2
 ****Enkriptimi****  
 ***Plaintext***: This is a test   
