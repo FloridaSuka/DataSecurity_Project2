@@ -22,8 +22,52 @@ public class BookCipher {
             System.exit(1);
         }
     }
-    public String encrypt(String message) {
-        return "Kodi ende nuk eshte implementuar.";
+    
+    public String encrypt(String message, boolean firstLetterOnly) {
+        StringBuilder result = new StringBuilder();
+
+        if (firstLetterOnly) {
+            String cleaned = message.toLowerCase().replaceAll("[^a-z]", "");
+            Map<Character, Integer> usageCount = new HashMap<>();
+
+            for (char ch : cleaned.toCharArray()) {
+                int count = usageCount.getOrDefault(ch, 0);
+                int matchIndex = -1;
+                int foundCount = 0;
+
+                for (int i = 0; i < bookWords.size(); i++) {
+                    String bookWord = bookWords.get(i);
+                    if (!bookWord.isEmpty() && bookWord.charAt(0) == ch) {
+                        if (foundCount == count) {
+                            matchIndex = i + 1;
+                            break;
+                        }
+                        foundCount++;
+                    }
+                }
+
+                if (matchIndex != -1) {
+                    result.append(matchIndex).append(" ");
+                    usageCount.put(ch, count + 1);
+                } else {
+                    result.append("? ");
+                }
+            }
+        } else {
+            String[] words = message.toLowerCase().replaceAll("[^a-z0-9\\s]", "").split("\\s+");
+            for (String word : words) {
+                if (!word.isEmpty()) {
+                    int index = bookWords.indexOf(word);
+                    if (index != -1) {
+                        result.append(index + 1).append(" ");
+                    } else {
+                        result.append("? ");
+                    }
+                }
+            }
+        }
+
+        return result.toString().trim();
     }
 
     // Deshifron indekset në fjalë nga libri
